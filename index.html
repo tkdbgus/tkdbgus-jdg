@@ -42,54 +42,36 @@
 .assign-layout{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:start}.assign-photo{border:1px solid #384739;border-radius:16px;overflow:hidden;background:#111711;position:sticky;top:0}.assign-photo img{width:100%;height:340px;object-fit:cover;display:block}.assign-photo .caption{padding:12px 14px;font-weight:900;text-align:center}.assign-form{min-width:0}@media(max-width:650px){.assign-layout{grid-template-columns:1fr}.assign-photo{position:static}.assign-photo img{height:280px}}
 .photo-viewer{width:min(720px,96vw);background:#0c110e;border:1px solid #384739;border-radius:22px;padding:18px;box-shadow:0 25px 80px #0009}.photo-viewer-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.photo-viewer-head h3{margin:0;font-size:20px}.photo-viewer-img{display:block;width:100%;max-height:78vh;object-fit:contain;border-radius:14px;background:#070908}.photo-viewer-close{border:1px solid #384739;background:#111711;color:#fff;width:38px;height:38px;border-radius:10px;font-size:20px;cursor:pointer}.photo-viewer-close:hover{border-color:#6d9637;color:var(--g)}
 
-/* 한눈에 보는 데스크톱 레이아웃 */
+/* 프리미엄 조직도 레이아웃 */
 html,body{height:100%;overflow:hidden}
 body{min-height:100vh}
-.top{height:58px;position:relative;padding:0 22px}
-.wrap{height:calc(100vh - 58px);max-width:none;padding:14px 18px 16px;overflow:hidden}
-.hero{margin-bottom:12px;align-items:center;gap:18px}
-.hero h1{font-size:clamp(22px,2.3vw,34px);margin:4px 0 5px}
-.hero p{font-size:11px}
-.eyebrow{font-size:9px}
-.progress{width:190px}
-.row{font-size:10px;margin-bottom:5px}
-.bar{height:6px}
-.workspace{height:calc(100% - 92px);grid-template-columns:250px minmax(0,1fr);gap:14px;align-items:stretch}
-.member-panel,.org-panel{padding:12px;border-radius:15px;height:100%;min-height:0}
-.member-panel{position:relative;top:auto;overflow:hidden}
-.member-panel h2,.org-panel h2{font-size:14px}
-.panel-sub{font-size:9px;margin-bottom:8px;white-space:nowrap}
-.member-panel .grid{height:calc(100% - 45px);grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:6px}
-.member-panel .card{min-height:0}
-.member-panel .photo{aspect-ratio:auto;height:calc(100% - 27px)}
-.member-panel .info{height:27px;padding:4px 6px;display:flex;align-items:center;justify-content:center}
-.member-panel .name{font-size:10px}
-.member-panel .badge{display:none}
-.org-panel{overflow:hidden}
-.org-panel .section{height:100%;display:flex;flex-direction:column}
-.org-title-row{margin-bottom:8px;flex:0 0 auto}
-.org-title-row h2{font-size:17px;margin:2px 0 0}
-.org-help{font-size:9px}
-.org-scroll{overflow:hidden;min-height:0;flex:1;padding:2px 0}
-.org-board{min-width:0;width:100%;height:100%;padding:2px 6px 4px;justify-content:flex-start}
-.org-company{width:150px;padding:6px 10px;border-radius:10px}
-.org-company b{font-size:12px}.org-company small{font-size:8px}
-.org-line-v{height:6px}
-.org-ceo{min-width:130px;padding:6px 10px;border-radius:10px}
-.org-ceo span{font-size:8px}.org-ceo b{font-size:12px}.org-ceo small{font-size:8px}
-.org-board>.org-line-v{display:none}
-.org-branch{width:100%;height:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;padding-top:0;margin-top:10px;flex:1}
-.org-branch:before,.org-unit:before{display:none}
-.org-unit{min-width:0;border:1px solid var(--l);background:#0b100c;border-radius:11px;padding:7px;display:flex;flex-direction:column;overflow:hidden}
-.org-dept{width:100%;justify-content:center;gap:5px;margin:0 0 6px;padding:5px 6px;border-radius:7px;font-size:10px;flex:0 0 auto}
-.org-dot{width:5px;height:5px}
-.org-people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;align-content:start;overflow:hidden}
-.org-person{width:auto;min-width:0;padding:4px;border-radius:7px}
-.org-person img,.org-avatar{height:68px;border-radius:5px}
-.org-person b{font-size:9px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.org-person span{font-size:8px;margin-top:1px}
-.org-empty{font-size:8px;padding:8px}
+.top{height:58px;position:relative;padding:0 22px;background:rgba(6,9,7,.9)}
+.wrap{height:calc(100vh - 58px);max-width:none;margin:0;padding:22px 20px 20px;display:flex;flex-direction:column;overflow:hidden}
+.hero{display:none}
+.workspace{display:grid;grid-template-columns:255px minmax(0,1fr);gap:18px;min-height:0;flex:1}
+.member-panel,.org-panel{height:100%;min-height:0;border:1px solid #26362a;background:linear-gradient(180deg,#0b110d,#080c09);border-radius:18px;padding:13px;box-shadow:0 14px 40px #0005}
+.member-panel{position:relative;top:auto;overflow:hidden}.member-panel h2{font-size:15px;margin:0 0 3px}.panel-sub{font-size:9px;color:#91a095;margin-bottom:9px;line-height:1.45}
+.member-panel .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.member-panel .card{cursor:grab;border-radius:9px;background:#0e1510;border-color:#27372b;box-shadow:none}.member-panel .card:hover{border-color:#789e48;box-shadow:0 8px 20px #0007}
+.member-panel .card:active{cursor:grabbing}.member-panel .card.dragging{opacity:.45;transform:scale(.97)}
+.member-panel .photo{aspect-ratio:1/1.08;background:#141a15}.member-panel .info{padding:5px 6px}.member-panel .name{font-size:10px}.member-panel .badge{font-size:7px;margin-top:3px;padding:2px 4px}
+.org-panel{overflow:hidden;padding:15px 18px 17px}.org-section{height:100%;display:flex;flex-direction:column;min-height:0}.org-title-row{margin-bottom:8px}.org-title-row h2{font-size:20px;letter-spacing:-.04em}.org-eyebrow{font-size:10px}.org-help{font-size:10px}
+.org-scroll{overflow:hidden;min-height:0;flex:1;padding:4px 0 0}.org-board{width:min(1260px,100%);min-width:0;height:100%;margin:0 auto;padding:0 8px 4px;display:flex;flex-direction:column;align-items:center}
+.org-company{width:auto;border:0;background:transparent;padding:0;margin:0 0 5px}.org-company b{font-size:11px;letter-spacing:.24em;color:#baff3f;text-transform:uppercase}.org-company small{font-size:8px;letter-spacing:.16em;color:#6f7d73}
+.org-line-v{display:none}
+.org-ceo{width:245px;min-height:82px;text-align:left;display:grid;grid-template-columns:76px 1fr;align-items:center;gap:13px;border:1px solid #71984a;background:linear-gradient(135deg,#132116,#0d130f);border-radius:16px;padding:8px 13px;margin:0 0 18px;box-shadow:0 0 0 1px #baff3f12,0 12px 30px #0007;position:relative;overflow:hidden}
+.org-ceo:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,#baff3f10,transparent 45%);pointer-events:none}.org-ceo:after{content:"CEO";position:absolute;right:11px;bottom:6px;font-size:8px;color:#6e7b70;letter-spacing:.2em}
+.org-ceo span{grid-column:1/-1;display:block;font-size:8px;color:#baff3f;font-weight:900;letter-spacing:.18em;position:absolute;top:9px;right:12px}.org-ceo b{display:block;font-size:16px;margin:0 0 2px;grid-column:2;grid-row:1}.org-ceo small{display:block;font-size:9px;color:#91a095;grid-column:2;grid-row:1;margin-top:28px}.org-ceo .ceo-photo{grid-column:1;grid-row:1;width:64px;height:64px;border-radius:11px;object-fit:cover;border:1px solid #4f6d45}
+.org-branch{width:100%;position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 26px;padding:0;align-content:start;flex:1}
+.org-branch:before{display:none}.org-unit{position:relative;text-align:left;min-width:0}.org-unit:before{display:none}
+.org-dept{width:100%;min-height:165px;display:flex;flex-direction:column;align-items:stretch;gap:0;border:1px solid #314134;background:linear-gradient(145deg,#111a14,#0b100d);border-radius:15px;padding:0;margin:0;overflow:hidden;text-align:left;transition:.22s;position:relative;box-shadow:0 10px 24px #0006}
+.org-dept:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--dept-accent,#baff3f),transparent 80%);opacity:.95}.org-dept:hover{transform:translateY(-3px);border-color:#526a51;box-shadow:0 14px 30px #0008}.org-dept.drop-target{border-color:#baff3f;box-shadow:0 0 0 2px #baff3f22,0 16px 34px #0009;transform:translateY(-3px)}
+.dept-head{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:8px;padding:11px 11px 9px;border-bottom:1px solid #253127;background:linear-gradient(180deg,#151e17,#101610)}.dept-icon{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:#162018;border:1px solid #334535;color:var(--dept-accent,#baff3f);font-size:13px;font-weight:900}.dept-name{font-size:12px;font-weight:900;line-height:1.15}.dept-en{display:block;color:#7e8d82;font-size:7px;letter-spacing:.11em;margin-top:3px;text-transform:uppercase}.dept-no{font-size:8px;color:#68766b;letter-spacing:.08em;align-self:start;padding-top:2px}.dept-body{padding:9px 10px 10px;min-height:112px;display:flex;flex-wrap:wrap;align-content:flex-start;gap:7px}.org-people{display:flex;justify-content:flex-start;flex-wrap:wrap;gap:7px;width:100%}
+.org-person{width:calc(50% - 4px);min-width:0;border:1px solid #2b392e;background:#0d140f;border-radius:9px;padding:4px;text-align:left;transition:.2s}.org-person:hover{border-color:#5f7e4e;transform:translateY(-2px)}.org-person img,.org-avatar{width:100%;height:58px;object-fit:cover;border-radius:6px;background:#171c18;display:block}.org-person b{display:block;font-size:9px;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.org-person span{display:block;color:#94a096;font-size:8px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.org-empty{width:100%;height:74px;display:grid;place-items:center;color:#78867c;font-size:9px;border:1px dashed #304033;border-radius:9px;background:#0b100d;position:relative}.org-empty:before{content:"＋";display:block;color:#baff3f;font-size:18px;line-height:1;margin-bottom:2px}.org-empty{padding-top:7px}
 .org-unassigned{display:none}
-@media(max-width:900px){html,body{overflow:auto}.wrap{height:auto;overflow:visible}.workspace{height:auto;grid-template-columns:1fr}.member-panel,.org-panel{height:auto}.org-scroll{overflow:auto}.org-board{min-width:900px}.member-panel .grid{height:auto;grid-template-rows:none}}
+@media(max-width:1150px){.workspace{grid-template-columns:220px minmax(0,1fr)}.org-branch{gap:18px 16px}.org-dept{min-height:150px}.org-person img,.org-avatar{height:50px}.org-board{width:min(1080px,100%)}}
+@media(max-width:900px){html,body{overflow:auto}.wrap{height:auto;overflow:visible}.workspace{grid-template-columns:1fr}.member-panel{height:auto}.org-panel{height:900px}.org-branch{grid-template-columns:repeat(5,minmax(150px,1fr));overflow:auto}.org-scroll{overflow:auto}.org-board{width:1000px}.member-panel .grid{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:650px){.member-panel .grid{grid-template-columns:repeat(4,1fr)}.org-panel{height:900px}.org-branch{grid-template-columns:repeat(2,1fr)}.org-board{width:100%}.assign-layout{grid-template-columns:1fr}}
 </style></head><body>
 <header class="top"><div class="brand"><div class="logo">J</div><span>JDG IF WORLD</span></div><div><button class="btn" onclick="openAdmin()">⚙ 관리자</button> <button class="btn primary" onclick="resetAll()">초기화</button></div></header>
 <main class="wrap"><section class="hero"><div><div class="eyebrow">IF COMPANY PROJECT · JINDUKI</div><h1>만약 진드기 멤버들이<br>한 회사에서 일한다면?</h1><p>왼쪽 멤버 사진을 원하는 부서로 끌어다 놓아 배치해보세요.</p></div><div class="progress"><div class="row"><span>조직도 완성도</span><b id="count"></b></div><div class="bar"><div class="fill" id="fill"></div></div></div></section>
@@ -126,11 +108,17 @@ function renderOrg(){
   const chiefs=assigned.filter(m=>db.assignments[m.name].role==='팀장');
   const ceo=chiefs[0];
   const ceoBlock=ceo
-    ? `<div class="org-company"><b>진드기 컴퍼니</b><small>JDG IF WORLD</small></div><div class="org-line-v"></div><div class="org-ceo"><span>CEO</span><b>${esc(ceo.name)}</b><small>${esc(db.assignments[ceo.name].dept)} · 팀장</small></div>`
-    : `<div class="org-company"><b>진드기 컴퍼니</b><small>JDG IF WORLD</small></div><div class="org-line-v"></div><div class="org-ceo"><span>CEO</span><b>CEO</b><small>대표이사</small></div>`;
-  const units=db.departments.map(d=>{
+    ? `<div class="org-company"><b>JDG COMPANY</b><small>IF WORLD · ORGANIZATION</small></div><div class="org-ceo"><img class="ceo-photo" src="${esc(ceo.image||'')}" alt="${esc(ceo.name)}"><span>CEO</span><b>${esc(ceo.name)}</b><small>${esc(db.assignments[ceo.name].dept)} · 팀장</small></div>`
+    : `<div class="org-company"><b>JDG COMPANY</b><small>IF WORLD · ORGANIZATION</small></div><div class="org-ceo"><div class="ceo-photo org-avatar">C</div><span>CEO</span><b>CEO</b><small>대표이사</small></div>`;
+  const deptMeta=[
+    ['전략기획팀','STRATEGY','✦','#baff3f'],['인사팀','HUMAN RESOURCES','●','#58b7ff'],['콘텐츠팀','CONTENT','▣','#c889ff'],['마케팅팀','MARKETING','◆','#ff6380'],['감사팀','AUDIT','◆','#e9bd4d'],
+    ['디자인팀','DESIGN','◉','#b47cff'],['재무팀','FINANCE','◒','#35d9cf'],['보안팀','SECURITY','▣','#ff536e'],['고객지원팀','CUSTOMER SUPPORT','◉','#ffad55'],['영업팀','SALES','▥','#48aaff']
+  ];
+  const units=db.departments.map((d,di)=>{
     const p=db.members.filter(m=>db.assignments[m.name]?.dept===d);
-    return `<div class="org-unit"><div class="org-dept" data-dept="${esc(d)}" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondrop="dropMember(event, '${esc(d).replace(/'/g, "\'")}')"><i class="org-dot"></i><b>${esc(d)}</b></div><div class="org-people">${p.length?p.map(m=>{const a=db.assignments[m.name];return `<div class="org-person"><div>${m.image?`<img src="${esc(m.image)}" alt="${esc(m.name)}">`:`<div class="org-avatar">${esc(m.name.slice(0,1))}</div>`}</div><b>${esc(m.name)}</b><span>${esc(a.role)}</span></div>`}).join(''):`<div class="org-empty">사진을 여기에 놓으세요</div>`}</div></div>`;
+    const meta=deptMeta[di]||[d,'DEPARTMENT','•','#baff3f'];
+    const people=p.length?p.map(m=>{const a=db.assignments[m.name];return `<div class="org-person"><div>${m.image?`<img src="${esc(m.image)}" alt="${esc(m.name)}">`:`<div class="org-avatar">${esc(m.name.slice(0,1))}</div>`}</div><b>${esc(m.name)}</b><span>${esc(a.role)}</span></div>`}).join(''):`<div class="org-empty">멤버를 여기에 배치</div>`;
+    return `<div class="org-unit"><div class="org-dept" style="--dept-accent:${meta[3]}" data-dept="${esc(d)}" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondrop="dropMember(event, '${esc(d).replace(/'/g, "\'")}')"><div class="dept-head"><div class="dept-icon">${meta[2]}</div><div><div class="dept-name">${esc(d)}</div><span class="dept-en">${esc(meta[1])}</span></div><div class="dept-no">${String(di+1).padStart(2,'0')}</div></div><div class="dept-body"><div class="org-people">${people}</div></div></div></div>`;
   }).join('');
   $('orgChart').innerHTML=`<div class="org-board">${ceoBlock}<div class="org-branch">${units}</div></div>`;
 }
