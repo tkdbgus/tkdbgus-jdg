@@ -1,0 +1,110 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JDG IF WORLD</title>
+<style>
+:root{--bg:#070908;--p:#0d120f;--l:#243127;--g:#baff3f;--t:#f5f7f3;--m:#99a69c}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 75% 0,#172419,#070908 45%);color:var(--t);font-family:system-ui,'Noto Sans KR',sans-serif}.top{height:70px;border-bottom:1px solid var(--l);display:flex;justify-content:space-between;align-items:center;padding:0 30px;position:sticky;top:0;background:#070908ed;backdrop-filter:blur(14px);z-index:5}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.12em}.logo{width:38px;height:38px;border:1px solid #6d9637;border-radius:11px;display:grid;place-items:center;color:var(--g);font-weight:1000}.btn{border:1px solid var(--l);background:#111711;color:#fff;padding:10px 14px;border-radius:10px}.primary{background:var(--g);color:#081006;border-color:var(--g);font-weight:900}.wrap{max-width:1320px;margin:auto;padding:55px 28px 90px}.hero{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.eyebrow{color:var(--g);font-size:12px;font-weight:900;letter-spacing:.2em}.hero h1{font-size:clamp(34px,5vw,64px);line-height:1.03;letter-spacing:-.055em;margin:10px 0 14px}.hero p{color:var(--m);margin:0}.progress{width:250px}.row{display:flex;justify-content:space-between;color:var(--m);font-size:13px;margin-bottom:8px}.bar{height:8px;background:#182019;border-radius:99px;overflow:hidden}.fill{height:100%;background:var(--g);transition:.3s;width:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.card{position:relative;overflow:hidden;border:1px solid var(--l);border-radius:18px;background:var(--p);cursor:pointer;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#5c803d}.photo{aspect-ratio:4/3;background:#171c18}.photo img{width:100%;height:100%;object-fit:cover;display:block}.info{padding:8px 9px}.name{font-size:14px;font-weight:900}.badge{display:inline-block;margin-top:7px;padding:5px 7px;border:1px solid #31492b;background:#172216;color:#d4ebb8;border-radius:7px;font-size:11px}.edit{position:absolute;right:9px;top:9px;background:#080b08dd;color:#fff;border:1px solid #536052;border-radius:8px;padding:7px}.section{margin-top:55px}.section h2{font-size:20px}.deptgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.dept{border:1px solid var(--l);border-radius:14px;padding:15px;background:#0c100d}.dept small{display:block;color:var(--m);margin-top:4px}.mini{display:flex;margin-top:11px}.mini img{width:34px;height:34px;object-fit:cover;border-radius:50%;border:2px solid #0c100d;margin-right:-8px}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:20px;z-index:20}.modal.show{display:flex}.box{width:min(900px,100%);max-height:90vh;overflow:auto;background:#0c110e;border:1px solid #384739;border-radius:20px;padding:24px}.box h3{margin:0 0 20px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;color:var(--m);font-size:12px;margin-bottom:7px}.field select,.field textarea,.field input{width:100%;padding:12px;border-radius:10px;border:1px solid var(--l);background:#101610;color:#fff}.field textarea{min-height:120px}.wide{grid-column:1/-1}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}.tabs{display:flex;gap:7px;margin-bottom:16px}.tab{padding:9px 12px;border-radius:9px;border:1px solid var(--l);background:#101510;color:#aeb8af}.tab.on{background:var(--g);color:#091007;font-weight:900}.admin-item{display:flex;justify-content:space-between;align-items:center;gap:8px;border:1px solid var(--l);padding:10px;border-radius:10px;margin:7px 0;background:#0e130f}.admin-item input{flex:1;padding:9px;border-radius:8px;border:1px solid var(--l);background:#101610;color:#fff}.danger{color:#ffaaa6!important;border-color:#61302f!important}.hint{color:#8c988f;font-size:12px;line-height:1.6}@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}.deptgrid{grid-template-columns:1fr 1fr}.hero{display:block}.progress{margin-top:22px}}@media(max-width:600px){.top{padding:0 14px}.wrap{padding:35px 14px}.grid{grid-template-columns:repeat(2,1fr);gap:10px}.deptgrid{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.wide{grid-column:auto}.brand span{display:none}}
+
+.org-title-row{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:16px}
+.org-eyebrow{color:var(--g);font-size:11px;font-weight:900;letter-spacing:.18em}
+.org-title-row h2{margin:5px 0 0;font-size:22px}.org-help{color:var(--m);font-size:12px}
+.org-scroll{overflow-x:auto;padding:10px 2px 24px}
+.org-board{min-width:1350px;display:flex;flex-direction:column;align-items:center;padding:4px 20px 20px}
+.org-company{width:190px;text-align:center;border:1px solid #39463b;background:#0d120f;border-radius:13px;padding:12px 16px}
+.org-company b{display:block;font-size:16px}.org-company small{color:var(--m);font-size:10px}
+.org-line-v{width:1px;height:22px;background:var(--l)}
+.org-chief{width:165px;text-align:center;border:1px solid #43533f;background:#111713;border-radius:12px;padding:8px;margin-bottom:0}
+.org-chief b{display:block;font-size:13px}.org-chief span{font-size:10px;color:var(--m)}
+.org-branch{width:100%;position:relative;display:grid;grid-template-columns:repeat(10,minmax(118px,1fr));gap:10px;padding-top:24px}
+.org-branch:before{content:"";position:absolute;top:0;left:5.55%;right:5.55%;height:1px;background:var(--l)}
+.org-unit{position:relative;text-align:center}.org-unit:before{content:"";position:absolute;top:-24px;left:50%;height:24px;width:1px;background:var(--l)}
+.org-dept{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--l);background:#0d120f;border-radius:9px;padding:7px 11px;margin-bottom:9px;font-size:12px}
+.org-dot{width:6px;height:6px;border-radius:50%;background:var(--g)}
+.org-people{display:flex;justify-content:center;flex-wrap:wrap;gap:7px}
+.org-person{width:108px;border:1px solid var(--l);background:#111713;border-radius:10px;padding:6px;text-align:left;transition:.2s}
+.org-person:hover{border-color:#5d7e3e;transform:translateY(-2px)}
+.org-person img,.org-avatar{width:100%;height:58px;object-fit:cover;border-radius:6px;background:#171c18;display:block}
+.org-avatar{display:grid;place-items:center;color:var(--g);font-weight:900;font-size:20px}
+.org-person b{display:block;font-size:11px;margin-top:6px}.org-person span{display:block;color:var(--m);font-size:9px;margin-top:2px}
+.org-empty{color:var(--m);font-size:10px;border:1px dashed var(--l);border-radius:9px;padding:12px}
+.org-unassigned{margin-top:22px;width:100%;border-top:1px solid var(--l);padding-top:16px;text-align:center;color:var(--m);font-size:11px}
+.org-unassigned-list{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:8px}
+.org-unassigned-item{border:1px solid var(--l);background:#0d120f;border-radius:8px;padding:5px 8px}
+@media(max-width:700px){.org-title-row{display:block}.org-help{margin-top:7px}}
+
+.workspace{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
+.member-panel,.org-panel{border:1px solid var(--l);background:#0a0f0b;border-radius:18px;padding:14px}
+.member-panel{position:sticky;top:84px}.member-panel h2,.org-panel h2{font-size:15px;margin:0 0 4px}.panel-sub{font-size:10px;color:var(--m);margin-bottom:11px}
+.member-panel .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.member-panel .card{cursor:grab}.member-panel .card:active{cursor:grabbing}.member-panel .card.dragging{opacity:.45;transform:scale(.97)}.member-panel .card{border-radius:10px}.member-panel .photo{aspect-ratio:1/1.12}.member-panel .info{padding:6px 7px}.member-panel .name{font-size:11px}.member-panel .edit{display:none}.member-panel .badge{font-size:8px;margin-top:3px;padding:2px 4px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.org-panel{min-width:0}.org-panel .section{margin-top:0}.org-panel .org-scroll{min-height:470px}
+@media(max-width:800px){.workspace{grid-template-columns:1fr}.member-panel{position:static}}
+
+.org-ceo{min-width:150px;text-align:center;border:1px solid #56664f;background:#111713;border-radius:12px;padding:9px 14px}
+.org-dept.drop-target{border-color:var(--g);box-shadow:0 0 0 2px #baff3f22,0 8px 22px #0008;transform:translateY(-2px)}.org-dept.drop-target b{color:var(--g)}.org-ceo span{display:block;font-size:9px;color:var(--g);font-weight:900;letter-spacing:.12em}
+.org-ceo b{display:block;font-size:13px;margin-top:2px}.org-ceo small{display:block;font-size:9px;color:var(--m);margin-top:2px}
+.assign-layout{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:start}.assign-photo{border:1px solid #384739;border-radius:16px;overflow:hidden;background:#111711;position:sticky;top:0}.assign-photo img{width:100%;height:340px;object-fit:cover;display:block}.assign-photo .caption{padding:12px 14px;font-weight:900;text-align:center}.assign-form{min-width:0}@media(max-width:650px){.assign-layout{grid-template-columns:1fr}.assign-photo{position:static}.assign-photo img{height:280px}}
+.photo-viewer{width:min(720px,96vw);background:#0c110e;border:1px solid #384739;border-radius:22px;padding:18px;box-shadow:0 25px 80px #0009}.photo-viewer-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.photo-viewer-head h3{margin:0;font-size:20px}.photo-viewer-img{display:block;width:100%;max-height:78vh;object-fit:contain;border-radius:14px;background:#070908}.photo-viewer-close{border:1px solid #384739;background:#111711;color:#fff;width:38px;height:38px;border-radius:10px;font-size:20px;cursor:pointer}.photo-viewer-close:hover{border-color:#6d9637;color:var(--g)}
+</style></head><body>
+<header class="top"><div class="brand"><div class="logo">J</div><span>JDG IF WORLD</span></div><div><button class="btn" onclick="openAdmin()">⚙ 관리자</button> <button class="btn primary" onclick="resetAll()">초기화</button></div></header>
+<main class="wrap"><section class="hero"><div><div class="eyebrow">IF COMPANY PROJECT · JINDUKI</div><h1>만약 진드기 멤버들이<br>한 회사에서 일한다면?</h1><p>왼쪽 멤버 사진을 원하는 부서로 끌어다 놓아 배치해보세요.</p></div><div class="progress"><div class="row"><span>조직도 완성도</span><b id="count"></b></div><div class="bar"><div class="fill" id="fill"></div></div></div></section>
+<div class="workspace"><section class="member-panel"><h2>멤버 선택</h2><div class="panel-sub">사진을 오른쪽 조직도의 부서로 끌어다 놓으세요.</div><div class="grid" id="members"></div></section><section class="org-panel"><section class="section org-section">
+  <div class="org-title-row">
+    <div><div class="org-eyebrow">ORGANIZATION CHART</div><h2>진드기 컴퍼니 조직도</h2></div>
+    <div class="org-help">사진을 부서에 놓으면 직책과 메모를 입력할 수 있습니다.</div>
+  </div>
+  <div class="org-scroll"><div id="orgChart"></div></div>
+</section></section></div></main>
+<div class="modal" id="assign"><div class="box"><h3 id="mt"></h3><div class="assign-layout"><div class="assign-photo"><img id="assignImg" src="" alt=""><div class="caption" id="assignName"></div></div><div class="assign-form"><div class="fields"><div class="field"><label>배치 부서</label><select id="ds" disabled></select></div><div class="field"><label>직책</label><select id="rs"></select></div><div class="field wide"><label>메모</label><textarea id="reason" maxlength="300" placeholder="이 멤버를 이 부서에 배치한 이유나 특징을 자유롭게 메모해보세요."></textarea></div></div><div class="modal-actions"><button class="btn" onclick="closeM()">취소</button><button class="btn primary" onclick="save()">저장</button></div></div></div></div></div>
+<div class="modal" id="photoViewer" onclick="if(event.target===this)closePhoto()"><div class="photo-viewer"><div class="photo-viewer-head"><h3 id="photoViewerName"></h3><button class="photo-viewer-close" onclick="closePhoto()">×</button></div><img id="photoViewerImg" class="photo-viewer-img" src="" alt=""></div></div>
+<div class="modal" id="admin"><div class="box"><h3>JDG IF WORLD 관리자</h3><div class="tabs"><button class="tab on" onclick="tab('members',this)">멤버</button><button class="tab" onclick="tab('departments',this)">부서</button><button class="tab" onclick="tab('roles',this)">직책</button></div><div id="adminBody"></div><div class="modal-actions"><button class="btn" onclick="closeA()">닫기</button></div></div></div>
+<script>
+const K='jdg_if_world_local_v2';
+let saved=localStorage.getItem(K);
+if(saved){try{saved=saved.replaceAll(String.fromCharCode(48960,47536,44152), '뽀끔')}catch(e){}}
+let db=JSON.parse(saved||'null')||{"members": [{"name": "이루희", "image": "images/이루희.png"}, {"name": "진호", "image": "images/진호.png"}, {"name": "히키", "image": "images/히키.png"}, {"name": "찰리씨", "image": "images/찰리씨.png"}, {"name": "설빈달", "image": "images/설빈달.png"}, {"name": "뽀끔", "image": "images/뽀끔.png"}, {"name": "야구자", "image": "images/야구자.png"}, {"name": "찌미", "image": "images/찌미.png"}, {"name": "호냥이", "image": "images/호냥이.png"}, {"name": "오늘님", "image": "images/오늘님.png"}, {"name": "두칠", "image": "images/두칠.png"}, {"name": "니즈", "image": "images/니즈.png"}], "departments": ["전략기획팀","인사팀","콘텐츠팀","마케팅팀","감사팀","디자인팀","재무팀","보안팀","고객지원팀","영업팀"], "roles": ["사원", "대리", "과장", "차장", "부장", "팀장"], "assignments": {}};
+// 이전 저장 데이터와 무관하게 현재 멤버명/사진을 최신값으로 정리
+(function normalizeData(){
+  const seen=new Set(), next={};
+  db.members=(db.members||[]).map(m=>m&&m.name==='뽀끔'?{...m,image:'images/뽀끔.png'}:m).filter(m=>{if(!m||seen.has(m.name))return false;seen.add(m.name);return true;});
+  Object.entries(db.assignments||{}).forEach(([name,a])=>{if(!next[name])next[name]=a;});
+  db.assignments=next;
+  localStorage.setItem(K,JSON.stringify(db));
+})();
+let idx=-1, dragMember=-1, dropDept='';
+const $=x=>document.getElementById(x);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function saveDB(){localStorage.setItem(K,JSON.stringify(db));render()}
+function render(){let done=Object.keys(db.assignments).length;$('count').textContent=`${done} / ${db.members.length}`;$('fill').style.width=(done/db.members.length*100||0)+'%';$('members').innerHTML=db.members.map((m,i)=>{let a=db.assignments[m.name];return `<article class="card" draggable="true" ondragstart="dragStart(event,${i})" ondragend="dragEnd(event)" onclick="${a?`openM(${i})`:''}"><button class="edit" onclick="event.stopPropagation();openM(${i})">${a?'수정':'배치'}</button><div class="photo">${m.image?`<img src="${esc(m.image)}" alt="${esc(m.name)}" onclick="event.stopPropagation();openPhoto(${i})">`:''}</div><div class="info"><div class="name">${esc(m.name)}</div>${a?`<span class="badge">${esc(a.dept)} · ${esc(a.role)}</span>`:''}</div></article>`}).join('');renderOrg();}
+
+function renderOrg(){
+  const assigned=db.members.filter(m=>db.assignments[m.name]);
+  const chiefs=assigned.filter(m=>db.assignments[m.name].role==='팀장');
+  const ceo=chiefs[0];
+  const ceoBlock=ceo
+    ? `<div class="org-company"><b>진드기 컴퍼니</b><small>JDG IF WORLD</small></div><div class="org-line-v"></div><div class="org-ceo"><span>CEO</span><b>${esc(ceo.name)}</b><small>${esc(db.assignments[ceo.name].dept)} · 팀장</small></div><div class="org-line-v"></div>`
+    : `<div class="org-company"><b>진드기 컴퍼니</b><small>JDG IF WORLD</small></div><div class="org-line-v"></div><div class="org-ceo"><span>CEO</span><b>CEO</b><small>대표이사</small></div><div class="org-line-v"></div>`;
+  const units=db.departments.map(d=>{
+    const p=db.members.filter(m=>db.assignments[m.name]?.dept===d);
+    return `<div class="org-unit"><div class="org-dept" data-dept="${esc(d)}" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondrop="dropMember(event, '${esc(d).replace(/'/g, "\\'")}')"><i class="org-dot"></i><b>${esc(d)}</b></div><div class="org-people">${p.length?p.map(m=>{const a=db.assignments[m.name];return `<div class="org-person"><div>${m.image?`<img src="${esc(m.image)}" alt="${esc(m.name)}">`:`<div class="org-avatar">${esc(m.name.slice(0,1))}</div>`}</div><b>${esc(m.name)}</b><span>${esc(a.role)}</span></div>`}).join(''):`<div class="org-empty">사진을 여기에 놓으세요</div>`}</div></div>`;
+  }).join('');
+  $('orgChart').innerHTML=`<div class="org-board">${ceoBlock}<div class="org-branch">${units}</div></div>`;
+}
+function openPhoto(i){const m=db.members[i];if(!m||!m.image)return;$('photoViewerName').textContent=m.name;$('photoViewerImg').src=m.image;$('photoViewerImg').alt=m.name;$('photoViewer').classList.add('show')}
+function closePhoto(){$('photoViewer').classList.remove('show');$('photoViewerImg').src=''}
+function openM(i,deptOverride=''){idx=i;let m=db.members[i],a=db.assignments[m.name]||{};let dept=deptOverride||a.dept||db.departments[0];$('mt').textContent=m.name+' · 배치 설정';$('assignName').textContent=m.name;$('assignImg').src=m.image||'';$('assignImg').alt=m.name;$('ds').innerHTML=db.departments.map(d=>`<option ${dept===d?'selected':''}>${esc(d)}</option>`).join('');$('rs').innerHTML=db.roles.map(r=>`<option ${a.role===r?'selected':''}>${esc(r)}</option>`).join('');$('reason').value=a.reason||'';$('assign').classList.add('show')}
+function closeM(){$('assign').classList.remove('show')}
+function dragStart(e,i){dragMember=i;e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',String(i));e.currentTarget.classList.add('dragging')}
+function dragEnd(e){dragMember=-1;document.querySelectorAll('.org-dept.drop-target').forEach(x=>x.classList.remove('drop-target'))}
+function allowDrop(e){e.preventDefault();e.dataTransfer.dropEffect='move'}
+function dragEnter(e){e.preventDefault();e.currentTarget.classList.add('drop-target')}
+function dragLeave(e){if(!e.currentTarget.contains(e.relatedTarget))e.currentTarget.classList.remove('drop-target')}
+function dropMember(e,dept){e.preventDefault();e.stopPropagation();document.querySelectorAll('.org-dept.drop-target').forEach(x=>x.classList.remove('drop-target'));let i=Number(e.dataTransfer.getData('text/plain'));if(!Number.isInteger(i)||!db.members[i]) i=dragMember;if(!Number.isInteger(i)||!db.members[i]) return;dragMember=-1;openM(i,dept)}
+function save(){let m=db.members[idx];if(!m)return;db.assignments[m.name]={dept:$('ds').value,role:$('rs').value,reason:$('reason').value.trim()};saveDB();closeM()}
+function resetAll(){if(confirm('모든 배치 결과와 메모를 초기화할까요?')){db.assignments={};saveDB()}}
+function openAdmin(){tab('members',document.querySelector('.tab'));$('admin').classList.add('show')}function closeA(){$('admin').classList.remove('show')}
+function tab(k,el){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));el.classList.add('on');if(k==='members')memberAdmin();else simpleAdmin(k)}
+function memberAdmin(){$('adminBody').innerHTML=`<p class="hint">현재 버전은 이 브라우저에 저장됩니다. 사진 교체도 관리자에서 바로 할 수 있습니다.</p>`+db.members.map((m,i)=>`<div class="admin-item"><b>${esc(m.name)}</b><label class="btn">사진 교체<input hidden type="file" accept="image/*" onchange="photo(${i},this)"></label><button class="btn danger" onclick="delMember(${i})">삭제</button></div>`).join('')+`<button class="btn primary" onclick="addMember()">＋ 멤버 추가</button>`}
+function simpleAdmin(k){let label=k==='departments'?'부서':'직책';$('adminBody').innerHTML=db[k].map((x,i)=>`<div class="admin-item"><input value="${esc(x)}" onchange="rename('${k}',${i},this.value)"><button class="btn danger" onclick="delItem('${k}',${i})">삭제</button></div>`).join('')+`<button class="btn primary" onclick="addItem('${k}')">＋ ${label} 추가</button>`}
+function addMember(){let n=prompt('새 멤버 이름');if(!n?.trim())return;db.members.push({name:n.trim(),image:''});saveDB();memberAdmin()}function delMember(i){if(confirm('삭제할까요?')){delete db.assignments[db.members[i].name];db.members.splice(i,1);saveDB();memberAdmin()}}
+function photo(i,input){let f=input.files?.[0];if(!f)return;let r=new FileReader();r.onload=()=>{db.members[i].image=r.result;saveDB();memberAdmin()};r.readAsDataURL(f)}
+function addItem(k){let l=k==='departments'?'부서':'직책',n=prompt(l+' 이름');if(!n?.trim())return;db[k].push(n.trim());saveDB();simpleAdmin(k)}
+function rename(k,i,v){if(!v.trim())return;let old=db[k][i];db[k][i]=v.trim();Object.values(db.assignments).forEach(a=>{if(k==='departments'&&a.dept===old)a.dept=v.trim();if(k==='roles'&&a.role===old)a.role=v.trim()});saveDB();simpleAdmin(k)}
+function delItem(k,i){if(confirm('삭제할까요?')){db[k].splice(i,1);saveDB();simpleAdmin(k)}}
+render();
+</script></body></html>
