@@ -41,6 +41,55 @@
 .org-ceo b{display:block;font-size:13px;margin-top:2px}.org-ceo small{display:block;font-size:9px;color:var(--m);margin-top:2px}
 .assign-layout{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:start}.assign-photo{border:1px solid #384739;border-radius:16px;overflow:hidden;background:#111711;position:sticky;top:0}.assign-photo img{width:100%;height:340px;object-fit:cover;display:block}.assign-photo .caption{padding:12px 14px;font-weight:900;text-align:center}.assign-form{min-width:0}@media(max-width:650px){.assign-layout{grid-template-columns:1fr}.assign-photo{position:static}.assign-photo img{height:280px}}
 .photo-viewer{width:min(720px,96vw);background:#0c110e;border:1px solid #384739;border-radius:22px;padding:18px;box-shadow:0 25px 80px #0009}.photo-viewer-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.photo-viewer-head h3{margin:0;font-size:20px}.photo-viewer-img{display:block;width:100%;max-height:78vh;object-fit:contain;border-radius:14px;background:#070908}.photo-viewer-close{border:1px solid #384739;background:#111711;color:#fff;width:38px;height:38px;border-radius:10px;font-size:20px;cursor:pointer}.photo-viewer-close:hover{border-color:#6d9637;color:var(--g)}
+
+/* 한눈에 보는 데스크톱 레이아웃 */
+html,body{height:100%;overflow:hidden}
+body{min-height:100vh}
+.top{height:58px;position:relative;padding:0 22px}
+.wrap{height:calc(100vh - 58px);max-width:none;padding:14px 18px 16px;overflow:hidden}
+.hero{margin-bottom:12px;align-items:center;gap:18px}
+.hero h1{font-size:clamp(22px,2.3vw,34px);margin:4px 0 5px}
+.hero p{font-size:11px}
+.eyebrow{font-size:9px}
+.progress{width:190px}
+.row{font-size:10px;margin-bottom:5px}
+.bar{height:6px}
+.workspace{height:calc(100% - 92px);grid-template-columns:250px minmax(0,1fr);gap:14px;align-items:stretch}
+.member-panel,.org-panel{padding:12px;border-radius:15px;height:100%;min-height:0}
+.member-panel{position:relative;top:auto;overflow:hidden}
+.member-panel h2,.org-panel h2{font-size:14px}
+.panel-sub{font-size:9px;margin-bottom:8px;white-space:nowrap}
+.member-panel .grid{height:calc(100% - 45px);grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:6px}
+.member-panel .card{min-height:0}
+.member-panel .photo{aspect-ratio:auto;height:calc(100% - 27px)}
+.member-panel .info{height:27px;padding:4px 6px;display:flex;align-items:center;justify-content:center}
+.member-panel .name{font-size:10px}
+.member-panel .badge{display:none}
+.org-panel{overflow:hidden}
+.org-panel .section{height:100%;display:flex;flex-direction:column}
+.org-title-row{margin-bottom:8px;flex:0 0 auto}
+.org-title-row h2{font-size:17px;margin:2px 0 0}
+.org-help{font-size:9px}
+.org-scroll{overflow:hidden;min-height:0;flex:1;padding:2px 0}
+.org-board{min-width:0;width:100%;height:100%;padding:2px 6px 4px;justify-content:flex-start}
+.org-company{width:150px;padding:6px 10px;border-radius:10px}
+.org-company b{font-size:12px}.org-company small{font-size:8px}
+.org-line-v{height:6px}
+.org-ceo{min-width:130px;padding:6px 10px;border-radius:10px}
+.org-ceo span{font-size:8px}.org-ceo b{font-size:12px}.org-ceo small{font-size:8px}
+.org-board>.org-line-v{display:none}
+.org-branch{width:100%;height:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;padding-top:0;margin-top:10px;flex:1}
+.org-branch:before,.org-unit:before{display:none}
+.org-unit{min-width:0;border:1px solid var(--l);background:#0b100c;border-radius:11px;padding:7px;display:flex;flex-direction:column;overflow:hidden}
+.org-dept{width:100%;justify-content:center;gap:5px;margin:0 0 6px;padding:5px 6px;border-radius:7px;font-size:10px;flex:0 0 auto}
+.org-dot{width:5px;height:5px}
+.org-people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;align-content:start;overflow:hidden}
+.org-person{width:auto;min-width:0;padding:4px;border-radius:7px}
+.org-person img,.org-avatar{height:68px;border-radius:5px}
+.org-person b{font-size:9px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.org-person span{font-size:8px;margin-top:1px}
+.org-empty{font-size:8px;padding:8px}
+.org-unassigned{display:none}
+@media(max-width:900px){html,body{overflow:auto}.wrap{height:auto;overflow:visible}.workspace{height:auto;grid-template-columns:1fr}.member-panel,.org-panel{height:auto}.org-scroll{overflow:auto}.org-board{min-width:900px}.member-panel .grid{height:auto;grid-template-rows:none}}
 </style></head><body>
 <header class="top"><div class="brand"><div class="logo">J</div><span>JDG IF WORLD</span></div><div><button class="btn" onclick="openAdmin()">⚙ 관리자</button> <button class="btn primary" onclick="resetAll()">초기화</button></div></header>
 <main class="wrap"><section class="hero"><div><div class="eyebrow">IF COMPANY PROJECT · JINDUKI</div><h1>만약 진드기 멤버들이<br>한 회사에서 일한다면?</h1><p>왼쪽 멤버 사진을 원하는 부서로 끌어다 놓아 배치해보세요.</p></div><div class="progress"><div class="row"><span>조직도 완성도</span><b id="count"></b></div><div class="bar"><div class="fill" id="fill"></div></div></div></section>
@@ -77,14 +126,15 @@ function renderOrg(){
   const chiefs=assigned.filter(m=>db.assignments[m.name].role==='팀장');
   const ceo=chiefs[0];
   const ceoBlock=ceo
-    ? `<div class="org-company"><b>진드기 컴퍼니</b><small>JDG IF WORLD</small></div><div class="org-line-v"></div><div class="org-ceo"><span>CEO</span><b>${esc(ceo.name)}</b><small>${esc(db.assignments[ceo.name].dept)} · 팀장</small></div><div class="org-line-v"></div>`
-    : `<div class="org-company"><b>진드기 컴퍼니</b><small>JDG IF WORLD</small></div><div class="org-line-v"></div><div class="org-ceo"><span>CEO</span><b>CEO</b><small>대표이사</small></div><div class="org-line-v"></div>`;
+    ? `<div class="org-company"><b>진드기 컴퍼니</b><small>JDG IF WORLD</small></div><div class="org-line-v"></div><div class="org-ceo"><span>CEO</span><b>${esc(ceo.name)}</b><small>${esc(db.assignments[ceo.name].dept)} · 팀장</small></div>`
+    : `<div class="org-company"><b>진드기 컴퍼니</b><small>JDG IF WORLD</small></div><div class="org-line-v"></div><div class="org-ceo"><span>CEO</span><b>CEO</b><small>대표이사</small></div>`;
   const units=db.departments.map(d=>{
     const p=db.members.filter(m=>db.assignments[m.name]?.dept===d);
-    return `<div class="org-unit"><div class="org-dept" data-dept="${esc(d)}" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondrop="dropMember(event, '${esc(d).replace(/'/g, "\\'")}')"><i class="org-dot"></i><b>${esc(d)}</b></div><div class="org-people">${p.length?p.map(m=>{const a=db.assignments[m.name];return `<div class="org-person"><div>${m.image?`<img src="${esc(m.image)}" alt="${esc(m.name)}">`:`<div class="org-avatar">${esc(m.name.slice(0,1))}</div>`}</div><b>${esc(m.name)}</b><span>${esc(a.role)}</span></div>`}).join(''):`<div class="org-empty">사진을 여기에 놓으세요</div>`}</div></div>`;
+    return `<div class="org-unit"><div class="org-dept" data-dept="${esc(d)}" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondrop="dropMember(event, '${esc(d).replace(/'/g, "\'")}')"><i class="org-dot"></i><b>${esc(d)}</b></div><div class="org-people">${p.length?p.map(m=>{const a=db.assignments[m.name];return `<div class="org-person"><div>${m.image?`<img src="${esc(m.image)}" alt="${esc(m.name)}">`:`<div class="org-avatar">${esc(m.name.slice(0,1))}</div>`}</div><b>${esc(m.name)}</b><span>${esc(a.role)}</span></div>`}).join(''):`<div class="org-empty">사진을 여기에 놓으세요</div>`}</div></div>`;
   }).join('');
   $('orgChart').innerHTML=`<div class="org-board">${ceoBlock}<div class="org-branch">${units}</div></div>`;
 }
+
 function openPhoto(i){const m=db.members[i];if(!m||!m.image)return;$('photoViewerName').textContent=m.name;$('photoViewerImg').src=m.image;$('photoViewerImg').alt=m.name;$('photoViewer').classList.add('show')}
 function closePhoto(){$('photoViewer').classList.remove('show');$('photoViewerImg').src=''}
 function openM(i,deptOverride=''){idx=i;let m=db.members[i],a=db.assignments[m.name]||{};let dept=deptOverride||a.dept||db.departments[0];$('mt').textContent=m.name+' · 배치 설정';$('assignName').textContent=m.name;$('assignImg').src=m.image||'';$('assignImg').alt=m.name;$('ds').innerHTML=db.departments.map(d=>`<option ${dept===d?'selected':''}>${esc(d)}</option>`).join('');$('rs').innerHTML=db.roles.map(r=>`<option ${a.role===r?'selected':''}>${esc(r)}</option>`).join('');$('reason').value=a.reason||'';$('assign').classList.add('show')}
